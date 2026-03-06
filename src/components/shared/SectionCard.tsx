@@ -1,0 +1,1 @@
+export function SectionCard({title,children}:{title:string;children:React.ReactNode}){return <section className="card p-4"><h3 className="mb-3 card-title">{title}</h3>{children}</section>;}

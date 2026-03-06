@@ -1,0 +1,1 @@
+export function TimelineCard({items}:{items:string[]}){return <div className="card p-4 space-y-2">{items.map(i=><div key={i} className="rounded border p-2 text-sm">{i}</div>)}</div>;}

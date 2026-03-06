@@ -1,0 +1,1 @@
+import { formatCurrency } from "@/lib/formatters/currency";export function KPIStatCard({label,value,currency}:{label:string;value:number;currency?:string}){return <div className="card p-4"><p className="muted">{label}</p><p className="mt-2 text-2xl font-semibold">{currency?formatCurrency(value,currency):value}</p></div>;}

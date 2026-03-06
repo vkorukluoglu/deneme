@@ -1,0 +1,1 @@
+export function OfferSummaryPanel({cost,margin}:{cost:number;margin:number}){const sale=cost*(1+margin);return <div className="card p-4 text-sm"><p>Maliyet: {cost}</p><p>Kâr Oranı: %{margin*100}</p><p>Satış: {sale}</p></div>;}

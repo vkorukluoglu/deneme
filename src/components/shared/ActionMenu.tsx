@@ -1,0 +1,1 @@
+export function ActionMenu(){return <button className="btn">İşlemler</button>;}

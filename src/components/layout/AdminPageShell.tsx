@@ -1,0 +1,1 @@
+import { AdminTopbar } from "./AdminTopbar";export function AdminPageShell({title,children}:{title:string;children:React.ReactNode}){return <div><AdminTopbar title={title}/><main className="space-y-4 p-6">{children}</main></div>;}

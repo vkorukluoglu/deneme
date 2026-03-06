@@ -1,0 +1,1 @@
+export function Breadcrumbs({items}:{items:string[]}){return <p className="text-xs text-slate-500">{items.join(" / ")}</p>;}

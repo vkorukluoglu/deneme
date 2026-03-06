@@ -1,0 +1,1 @@
+export function ConfirmDialog(){return <button className="btn">Onay Diyaloğu</button>;}

@@ -1,0 +1,1 @@
+export function FormSection({title,children}:{title:string;children:React.ReactNode}){return <section className="card p-4"><h3 className="mb-3 card-title">{title}</h3><div className="grid grid-cols-1 gap-3 md:grid-cols-2">{children}</div></section>;}

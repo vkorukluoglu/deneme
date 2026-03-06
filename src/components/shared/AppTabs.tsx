@@ -1,0 +1,1 @@
+"use client";import { useState } from "react";export function AppTabs({tabs}:{tabs:{label:string;content:React.ReactNode}[]}){const [a,setA]=useState(0);return <div><div className="mb-3 flex flex-wrap gap-2">{tabs.map((t,i)=><button key={t.label} className={i===a?"btn-primary":"btn"} onClick={()=>setA(i)}>{t.label}</button>)}</div>{tabs[a]?.content}</div>;}

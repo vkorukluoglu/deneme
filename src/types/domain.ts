@@ -1,0 +1,21 @@
+export type Durum="Aktif"|"Pasif"|"Taslak"|"Onay Bekliyor"|"Onaylandı"|"Reddedildi"|"Acil"|"Tamamlandı"|"Millileşti"|"Antrepoda";
+export interface Machine{id:string;kod:string;ad:string;kategori:string;altKategori:string;marka:string;model:string;mensei:string;durum:Durum;standartKarOrani:number;leasingKarOrani:number;gtip:string;}
+export interface MachineSpec{machineId:string;motorGucu:string;agirlik:string;yakitTipi:string;kapasite:string;}
+export interface Proforma{id:string;no:string;tedarikci:string;durum:Durum;paraBirimi:"USD"|"EUR";toplam:number;tahminiVaris:string;}
+export interface ProformaItem{id:string;proformaId:string;machineId:string;adet:number;birimFiyat:number;}
+export interface Shipment{id:string;proformaId:string;konteynerNo:string;tasimaDurumu:string;varisNoktasi:string;tahminiVaris:string;}
+export interface ImportCost{proformaId:string;faturaKiymeti:number;navlun:number;sigorta:number;igv:number;kdv:number;toplamUsd:number;toplamTl:number;}
+export interface StockItem{id:string;machineId:string;lokasyon:string;durum:"Millileşti"|"Antrepoda";adet:number;}
+export interface SalesMachine{machineId:string;fiyat:number;paraBirimi:"USD"|"EUR"|"TRY";durum:"Satışta"|"Rezerve"|"Satıldı";}
+export interface Customer{id:string;ad:string;sektor:string;temsilci:string;sehir:string;portalAktif:boolean;}
+export interface Offer{id:string;no:string;customerId:string;salesType:"Leasing"|"Nakit"|"Kredi";durum:Durum;createdAt:string;toplam:number;}
+export interface OfferLine{id:string;offerId:string;machineId:string;maliyet:number;karOrani:number;satisFiyati:number;}
+export interface CalendarEvent{id:string;title:string;tarih:string;tip:"Görüşme"|"Servis"|"Teslimat";sorumlu:string;}
+export interface ServiceRequest{id:string;talepNo:string;customerId:string;machineId:string;durum:Durum;oncelik:"Düşük"|"Orta"|"Yüksek";garanti:boolean;createdAt:string;}
+export interface WorkOrder{id:string;no:string;requestId:string;teknisyen:string;durum:Durum;}
+export interface Part{id:string;kod:string;ad:string;kategori:string;birim:string;uyumluMakineIds:string[];}
+export interface PartStock{partId:string;mevcut:number;rezerve:number;minimum:number;}
+export interface StockMovement{id:string;partId:string;tip:"Giriş"|"Çıkış"|"Transfer";miktar:number;tarih:string;referans:string;}
+export interface PartRequest{id:string;customerId:string;machineId:string;partId:string;adet:number;durum:Durum;createdAt:string;}
+export interface PortalMachine{id:string;machineId:string;customerId:string;seriNo:string;garantiBitis:string;}
+export interface PortalRequest{id:string;tip:"Servis"|"Parça";referansId:string;durum:Durum;createdAt:string;}

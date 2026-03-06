@@ -1,0 +1,14 @@
+import { CalendarEvent, Customer, Machine, Offer, Part, PartRequest, PartStock, PortalMachine, PortalRequest, Proforma, ServiceRequest, StockMovement, WorkOrder } from "@/types/domain";
+export const machines:Machine[]=[{id:"m1",kod:"EXC-320",ad:"Paletli Ekskavatör 32T",kategori:"Ekskavatör",altKategori:"Paletli",marka:"Hitron",model:"HX320",mensei:"Japonya",durum:"Aktif",standartKarOrani:0.2,leasingKarOrani:0.01,gtip:"8429.52"},{id:"m2",kod:"LDR-540",ad:"Lastikli Yükleyici",kategori:"Yükleyici",altKategori:"Lastikli",marka:"NordMach",model:"L540",mensei:"Almanya",durum:"Aktif",standartKarOrani:0.1,leasingKarOrani:0.01,gtip:"8429.51"}];
+export const customers:Customer[]=[{id:"c1",ad:"Yıldız Hafriyat",sektor:"İnşaat",temsilci:"Ayşe Kara",sehir:"İstanbul",portalAktif:true},{id:"c2",ad:"Anka Madencilik",sektor:"Madencilik",temsilci:"Can Demir",sehir:"Ankara",portalAktif:true}];
+export const proformas:Proforma[]=[{id:"p1",no:"PF-2026-001",tedarikci:"Global Equip",durum:"Onaylandı",paraBirimi:"USD",toplam:540000,tahminiVaris:"2026-04-12"},{id:"p2",no:"PF-2026-002",tedarikci:"Nord Import",durum:"Onay Bekliyor",paraBirimi:"EUR",toplam:310000,tahminiVaris:"2026-04-28"}];
+export const offers:Offer[]=[{id:"o1",no:"TKL-5001",customerId:"c1",salesType:"Leasing",durum:"Onay Bekliyor",createdAt:"2026-03-02",toplam:9200000}];
+export const serviceRequests:ServiceRequest[]=[{id:"sr1",talepNo:"SR-1001",customerId:"c1",machineId:"m1",durum:"Acil",oncelik:"Yüksek",garanti:true,createdAt:"2026-03-03"}];
+export const workOrders:WorkOrder[]=[{id:"wo1",no:"WO-4001",requestId:"sr1",teknisyen:"Mehmet Usta",durum:"Aktif"}];
+export const parts:Part[]=[{id:"pt1",kod:"FLT-900",ad:"Hidrolik Filtre",kategori:"Filtre",birim:"Adet",uyumluMakineIds:["m1"]}];
+export const partStocks:PartStock[]=[{partId:"pt1",mevcut:45,rezerve:12,minimum:20}];
+export const stockMovements:StockMovement[]=[{id:"mv1",partId:"pt1",tip:"Çıkış",miktar:2,tarih:"2026-03-02",referans:"WO-4001"}];
+export const partRequests:PartRequest[]=[{id:"pr1",customerId:"c1",machineId:"m1",partId:"pt1",adet:4,durum:"Onay Bekliyor",createdAt:"2026-03-03"}];
+export const portalMachines:PortalMachine[]=[{id:"pm1",machineId:"m1",customerId:"c1",seriNo:"HX320-TR-8891",garantiBitis:"2027-08-12"}];
+export const portalRequests:PortalRequest[]=[{id:"por1",tip:"Servis",referansId:"sr1",durum:"Acil",createdAt:"2026-03-03"}];
+export const calendarEvents:CalendarEvent[]=[{id:"e1",title:"Demo",tarih:"2026-03-07",tip:"Görüşme",sorumlu:"Ayşe"}];
