@@ -1,0 +1,1 @@
+export function ActivityFeed({items}:{items:string[]}){return <ul className="space-y-2">{items.map(i=><li key={i} className="rounded border bg-white p-2 text-sm">{i}</li>)}</ul>;}

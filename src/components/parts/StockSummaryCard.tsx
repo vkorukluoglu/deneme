@@ -1,0 +1,1 @@
+export function StockSummaryCard({mevcut,rezerve}:{mevcut:number;rezerve:number}){const k=mevcut-rezerve;return <div className="card p-4 text-sm"><p>Mevcut: {mevcut}</p><p>Rezerve: {rezerve}</p><p className="font-semibold">Kullanılabilir: {k}</p></div>;}

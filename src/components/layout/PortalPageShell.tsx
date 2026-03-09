@@ -1,0 +1,1 @@
+import { PortalTopbar } from "./PortalTopbar";export function PortalPageShell({title,children}:{title:string;children:React.ReactNode}){return <div className="min-h-screen bg-slate-100"><PortalTopbar/><main className="mx-auto max-w-6xl space-y-4 p-6"><h1 className="text-xl font-semibold">{title}</h1>{children}</main></div>;}

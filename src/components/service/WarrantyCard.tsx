@@ -1,0 +1,1 @@
+export function WarrantyCard(){return <div className="card p-4">Garanti bilgisi makina detayından bağlı</div>;}

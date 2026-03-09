@@ -1,0 +1,1 @@
+export function InfoGrid({items}:{items:{label:string;value:string}[]}){return <div className="grid gap-3 md:grid-cols-3">{items.map(i=><div key={i.label} className="rounded border p-3"><p className="text-xs text-slate-500">{i.label}</p><p className="font-medium">{i.value}</p></div>)}</div>;}

@@ -1,0 +1,1 @@
+export function KeyValueList({items}:{items:{key:string;value:string}[]}){return <div className="space-y-2 text-sm">{items.map(i=><div key={i.key} className="flex justify-between"><span className="text-slate-500">{i.key}</span><span>{i.value}</span></div>)}</div>;}

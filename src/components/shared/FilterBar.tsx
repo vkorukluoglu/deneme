@@ -1,0 +1,1 @@
+export function FilterBar(){return <div className="card mb-4 flex flex-wrap gap-2 p-3"><input className="input max-w-xs" placeholder="Ara..."/><select className="input max-w-44"><option>Durum</option></select><button className="btn">Filtrele</button></div>;}

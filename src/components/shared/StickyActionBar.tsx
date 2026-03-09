@@ -1,0 +1,1 @@
+export function StickyActionBar({children}:{children:React.ReactNode}){return <div className="sticky bottom-0 flex justify-end gap-2 border-t bg-white p-3">{children}</div>;}

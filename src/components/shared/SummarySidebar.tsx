@@ -1,0 +1,1 @@
+export function SummarySidebar({items}:{items:{label:string;value:string}[]}){return <aside className="card h-fit p-4"><h3 className="mb-2 card-title">Özet</h3><div className="space-y-2 text-sm">{items.map(i=><div key={i.label} className="flex justify-between"><span className="text-slate-500">{i.label}</span><span>{i.value}</span></div>)}</div></aside>;}

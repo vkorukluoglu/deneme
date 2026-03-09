@@ -1,0 +1,2 @@
+import { PortalPageShell } from "@/components/layout/PortalPageShell";import { SectionCard } from "@/components/shared/SectionCard";import { DataTable } from "@/components/shared/DataTable";import { StatusBadge } from "@/components/shared/StatusBadge";import { portalMachines,portalRequests,parts } from "@/data/mock";
+export default function Page(){return <PortalPageShell title="Makinalarım"><SectionCard title="Makine Listesi"><DataTable headers={["Seri No","Garanti"]} rows={portalMachines.map(m=>[m.seriNo,m.garantiBitis])}/></SectionCard></PortalPageShell>;}
